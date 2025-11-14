@@ -56,7 +56,7 @@ function Footer() {
             © {new Date().getFullYear()} HomeMetaX. All rights reserved.
           </p>
           <p className="footer-note">
-            Made with ❤️ for the Web3 community
+            Made with ❤️ for the Web3 community • <span style={{color: '#8DFFA4', fontWeight: '600'}}>v2.0</span>
           </p>
         </div>
       </div>

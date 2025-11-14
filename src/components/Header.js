@@ -8,9 +8,6 @@ import Logo from './Logo';
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [overlayActive, setOverlayActive] = useState(false);
-  
-  // DEBUG: Verify new header is loading
-  console.log('🔥 NEW OVERLAY HEADER LOADED - Version 2.0');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,11 +52,6 @@ function Header() {
             <span className={`bar-top ${overlayActive ? 'animate-top-bar' : 'animate-out-top-bar'}`}></span>
             <span className={`bar-middle ${overlayActive ? 'animate-middle-bar' : 'animate-out-middle-bar'}`}></span>
             <span className={`bar-bottom ${overlayActive ? 'animate-bottom-bar' : 'animate-out-bottom-bar'}`}></span>
-          </div>
-          
-          {/* DEBUG MARKER - Remove after confirming it works */}
-          <div style={{position: 'absolute', top: '5px', right: '5px', background: '#8DFFA4', color: '#212121', padding: '2px 5px', fontSize: '10px', borderRadius: '3px', zIndex: 9999}}>
-            V2.0
           </div>
         </div>
       </header>

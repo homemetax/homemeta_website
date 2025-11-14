@@ -46,8 +46,12 @@
 }
 
 /* Platform-specific hover colors */
-.social-button.facebook:hover {
-  background: #3b5998;
+.social-button.substack:hover {
+  background: #FF6719;
+}
+
+.social-button.telegram:hover {
+  background: #0088cc;
 }
 
 .social-button.twitter:hover {

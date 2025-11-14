@@ -5,20 +5,26 @@ import React from 'react';
 import './SocialButtons.css';
 
 function SocialButtons() {
-  // Social media links - update URLs with your actual profiles
+  // Social media links
   const socialLinks = [
-    {
-      name: 'Facebook',
-      url: 'https://facebook.com/homeMetaX', // Update with your actual Facebook URL
-      icon: 'fab fa-facebook-f',
-      className: 'facebook'
-    },
     {
       name: 'X (Twitter)',
       url: 'https://twitter.com/homeMetaX',
       icon: '𝕏', // Using X character instead of Font Awesome icon
       className: 'twitter',
       isText: true
+    },
+    {
+      name: 'Telegram Journal',
+      url: 'https://t.me/home_journal',
+      icon: 'fab fa-telegram-plane',
+      className: 'telegram'
+    },
+    {
+      name: 'Substack Newsletter',
+      url: 'https://homemetax.substack.com/',
+      icon: 'fas fa-envelope-open-text',
+      className: 'substack'
     },
     {
       name: 'Instagram',
@@ -28,7 +34,7 @@ function SocialButtons() {
     },
     {
       name: 'Reddit',
-      url: 'https://reddit.com/user/homeMetaX', // Update with your actual Reddit URL
+      url: 'https://reddit.com/user/homeMetaX',
       icon: 'fab fa-reddit',
       className: 'reddit'
     }

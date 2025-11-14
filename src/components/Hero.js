@@ -11,28 +11,30 @@ function Hero() {
   const containerRef = useRef(null);
   const autoSlideTimeoutRef = useRef(null);
 
-  const numOfSlides = 2; // 3 slides (0-2)
+  const numOfSlides = 3; // 4 slides (0-3)
   const animTime = 500;
   const autoSlideDelay = 6000;
 
   const slides = [
     {
       bgColor: 'rgb(233, 156, 126)', // Orange/Peach
-      title: 'Project name 1',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.',
-      link: 'Project link'
+      title: 'Curiosity',
+      desc: 'You don\'t grow if you don\'t learn and explore'
     },
     {
       bgColor: 'rgb(173, 197, 205)', // Light Blue
-      title: 'Project name 2',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.',
-      link: 'Project link'
+      title: 'Gaming - Accessibility',
+      desc: 'Everyone should have a chance'
     },
     {
       bgColor: 'rgb(225, 204, 174)', // Beige/Tan
-      title: 'Project name 3',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.',
-      link: 'Project link'
+      title: 'Community',
+      desc: 'Help each other'
+    },
+    {
+      bgColor: 'rgb(198, 167, 207)', // Purple/Lavender
+      title: 'Honesty - Transparency',
+      desc: 'Building trust through openness'
     }
   ];
 
@@ -200,22 +202,13 @@ function Hero() {
         </svg>
         <div className="static-triangle-content">
           <p className="hero-tagline">
-            8 Years • Blockchain Explorer • Community Builder
-          </p>
-          <p className="hero-description-main">
-            Building a better world through blockchain technology.
+            Building communities, DAOs, and connections in web3 since 2017.
           </p>
           <div className="hero-description-text">
             <p>
-              For 8 years, I've been exploring, investing, and researching the 
-              blockchain frontier. My journey centers on building DAOs and nurturing 
-              communities, with gaming as my primary focus. Recognizing it as the 
-              perfect entry point for young and courageous entrepreneurs.
-            </p>
-            <p>
-              Beyond gaming, I engage with RWA projects, degen trends, and the full 
-              spectrum of blockchain innovation. Recently, I've discovered a new passion for 
-              business development and connecting people who share a vision for Web3's future.
+              Started with curiosity, stayed for the revolution. I build communities, 
+              connect founders, and hunt for the next big play in crypto—from GameFi 
+              to RWA, from degen moves to solid business dev.
             </p>
           </div>
           <div className="hero-cta">
@@ -260,7 +253,10 @@ function Hero() {
               }}
             >
               <div className="slide__content">
-                {/* Removed overlay and text - now static on left side */}
+                <div className="pillar-content">
+                  <h2 className="pillar-title-large">{slide.title}</h2>
+                  <p className="pillar-desc-large">{slide.desc}</p>
+                </div>
               </div>
             </div>
           );

@@ -88,14 +88,18 @@ Overlay Navigation
 
 .overlay-navigation nav li a {
   position: relative;
-  top: 46%;
   color: #fff;
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   letter-spacing: 4px;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -145,25 +149,25 @@ Overlay Navigation
   opacity: 1;
 }
 
-/* Color scheme using your palette */
+/* Clean gradient color scheme - Dark Teal to Mint Green */
 .overlay-navigation nav li:nth-of-type(1) {
-  background-color: #1D382C; /* Dark Teal/Green */
+  background: linear-gradient(135deg, #1D382C 0%, #2a4d3d 100%);
 }
 
 .overlay-navigation nav li:nth-of-type(2) {
-  background-color: #2a2a3e; /* Dark Blue-Gray */
+  background: linear-gradient(135deg, #2a4d3d 0%, #3d7359 100%);
 }
 
 .overlay-navigation nav li:nth-of-type(3) {
-  background-color: #8B6F47; /* Brown */
+  background: linear-gradient(135deg, #3d7359 0%, #5fa87d 100%);
 }
 
 .overlay-navigation nav li:nth-of-type(4) {
-  background-color: #8DFFA4; /* Mint Green */
+  background: linear-gradient(135deg, #5fa87d 0%, #8DFFA4 100%);
 }
 
 .overlay-navigation nav li:nth-of-type(4) a {
-  color: #212121; /* Dark text on mint green background */
+  color: #212121; /* Dark text on lighter background */
 }
 
 .overlay-navigation nav li:nth-of-type(4) a:before {

@@ -283,6 +283,10 @@ svg {
   left: 200%;
 }
 
+.slide:nth-child(4) {
+  left: 300%;
+}
+
 /* Removed - overlay and text are now static */
 
 .slide__bg {
@@ -304,6 +308,34 @@ svg {
   height: 100%;
   background: transparent;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pillar content displayed on each slide */
+.pillar-content {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 600px;
+  margin-left: 50%;
+}
+
+.pillar-title-large {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.pillar-desc-large {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
 }
 
 .slide__overlay {
@@ -435,40 +467,51 @@ svg {
 
   .static-triangle-content {
     position: absolute;
-    width: 90%;
+    width: calc(100% - 120px);
     max-width: 100%;
     left: 5%;
-    top: 10%;
-    bottom: auto;
+    right: auto;
+    top: 15%;
     transform: none;
+    bottom: auto;
     background: transparent;
     backdrop-filter: none;
     border-radius: 0;
-    padding: 1.5rem 0;
+    padding: 2rem 1.5rem 2.5rem;
     box-shadow: none;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+  
+  .slider-pagi {
+    bottom: 1.5rem;
   }
 
   .hero-tagline {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 
   .hero-description-main {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-description-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .hero-cta {
     flex-direction: column;
+    margin-top: 1rem;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   .slide__overlay {
@@ -519,27 +562,56 @@ svg {
   }
 
   .static-triangle-content {
-    width: 95%;
+    width: calc(100% - 100px);
     left: 2.5%;
-    top: 10%;
+    right: auto;
+    top: 12%;
+    transform: none;
     bottom: auto;
     background: transparent;
     backdrop-filter: none;
     border-radius: 0;
-    padding: 1.5rem 0;
+    padding: 1.8rem 1.5rem 2.5rem;
     box-shadow: none;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+  
+  .slider-pagi {
+    bottom: 1.2rem;
   }
 
   .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
   }
 
   .hero-description-main {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 
   .hero-description-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .pillar-title-large {
+    font-size: 2.5rem;
+  }
+
+  .pillar-desc-large {
+    font-size: 1.2rem;
+  }
+
+  .pillar-content {
+    margin-left: 0;
+    padding: 1.5rem;
   }
 }
 
@@ -551,25 +623,54 @@ svg {
 
   .static-triangle-content {
     top: 10%;
+    transform: none;
     bottom: auto;
-    width: 90%;
+    width: calc(100% - 90px);
     left: 5%;
+    right: auto;
     background: transparent;
     backdrop-filter: none;
     border-radius: 0;
-    padding: 1.25rem 0;
+    padding: 1.5rem 1.2rem 2.5rem;
     box-shadow: none;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+  }
+  
+  .slider-pagi {
+    bottom: 1rem;
   }
 
   .hero-tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
   }
 
   .hero-description-main {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
   }
 
   .hero-description-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .btn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .pillar-title-large {
+    font-size: 2rem;
+  }
+
+  .pillar-desc-large {
+    font-size: 1rem;
+  }
+
+  .pillar-content {
+    margin-left: 0;
+    padding: 1rem;
   }
 }

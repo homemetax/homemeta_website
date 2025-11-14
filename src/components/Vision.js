@@ -4,6 +4,7 @@
 
 import React from 'react';
 import './Vision.css';
+import profileImage from '../assets/profile-1.jpg';
 
 function Vision() {
   return (
@@ -17,50 +18,25 @@ function Vision() {
 
         {/* Main vision content */}
         <div className="vision-content">
-          <div className="vision-main">
-            <h3 className="vision-heading">
-              Crypto Can Make the World a Better Place
-            </h3>
-            <p className="vision-text">
-              For over 8 years, I've witnessed the transformative power of blockchain technology. 
-              What started as a curiosity has become a mission: to leverage crypto and Web3 innovations 
-              to create positive change in the world.
-            </p>
-            <p className="vision-text">
-              Through decentralized systems, we can build more transparent, equitable, and accessible 
-              solutions. From GameFI that rewards players fairly, to DAOs that empower communities, 
-              to DeFi that provides financial freedom—the possibilities are endless.
-            </p>
-          </div>
-
-          {/* Vision pillars - key beliefs */}
-          <div className="vision-pillars">
-            <div className="pillar">
-              <div className="pillar-icon">🌍</div>
-              <h4 className="pillar-title">Global Impact</h4>
-              <p className="pillar-text">
-                Building solutions that transcend borders and empower people worldwide
+          <div className="vision-main-wrapper">
+            <img 
+              src={profileImage}
+              alt="Profile" 
+              className="vision-profile-image"
+            />
+            <div className="vision-main">
+              <h3 className="vision-heading">
+                Crypto Will Make the World a Better Place
+              </h3>
+              <p className="vision-text">
+                For 8 years, I've been exploring, investing, and researching the blockchain frontier. 
+                My journey centers on building DAOs and nurturing communities, with web3gaming as my primary 
+                focus. To me gaming is the perfect way to find courageous young entrepreneurs looking to change their financial future.
               </p>
-            </div>
-            <div className="pillar">
-              <div className="pillar-icon">⚡</div>
-              <h4 className="pillar-title">Innovation</h4>
-              <p className="pillar-text">
-                Pushing boundaries with cutting-edge Web3 technologies and concepts
-              </p>
-            </div>
-            <div className="pillar">
-              <div className="pillar-icon">🤝</div>
-              <h4 className="pillar-title">Community</h4>
-              <p className="pillar-text">
-                Fostering collaborative ecosystems where everyone can participate and benefit
-              </p>
-            </div>
-            <div className="pillar">
-              <div className="pillar-icon">🔐</div>
-              <h4 className="pillar-title">Transparency</h4>
-              <p className="pillar-text">
-                Creating trust through open, verifiable, and decentralized systems
+              <p className="vision-text">
+                Beyond web3gaming, I engage with everything from RWA projects, degen trends, and the full spectrum of 
+                blockchain innovation. Recently, I've discovered a new passion for business development 
+                and connecting people who have aligned visions.
               </p>
             </div>
           </div>
