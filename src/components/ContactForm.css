@@ -1,0 +1,144 @@
+/* Contact Form Component Styles */
+
+.contact-form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(29, 56, 44, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(141, 255, 164, 0.1);
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #8DFFA4; /* Mint green */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-form-subtitle {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between form fields */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.form-input {
+  padding: 0.875rem 1rem;
+  background-color: rgba(33, 33, 33, 0.6);
+  border: 1px solid rgba(141, 255, 164, 0.2);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-family: inherit; /* Uses the same font as the rest of the site */
+  transition: all 0.3s ease;
+}
+
+/* Placeholder text styling */
+.form-input::placeholder {
+  color: #6a6a6a;
+}
+
+/* Focus state - when user clicks on input */
+.form-input:focus {
+  outline: none; /* Removes default browser outline */
+  border-color: #8DFFA4; /* Mint green border */
+  box-shadow: 0 0 0 3px rgba(141, 255, 164, 0.1); /* Subtle glow */
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+/* Select dropdown styling */
+.form-input select {
+  cursor: pointer;
+}
+
+/* Textarea specific styling */
+.form-textarea {
+  resize: vertical; /* Allows vertical resizing only */
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.form-submit {
+  padding: 1rem 2rem;
+  background-color: #8DFFA4; /* Mint green */
+  color: #212121; /* Dark text */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit:hover {
+  background-color: #C8F4E0; /* Lighter mint */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 255, 164, 0.4);
+}
+
+.form-submit:active {
+  transform: translateY(0); /* Pressed effect */
+}
+
+/* Success message styling */
+.form-success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(141, 255, 164, 0.2);
+  color: #8DFFA4;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 2px solid #8DFFA4;
+}
+
+.form-success p {
+  font-size: 1.2rem;
+  color: #8DFFA4;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .contact-form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    font-size: 0.95rem;
+  }
+}
+

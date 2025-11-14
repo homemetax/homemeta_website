@@ -1,0 +1,107 @@
+/* Navigation Arrows - Floating on the left side of the viewport */
+/* Matches the styling of social buttons for consistency */
+
+.navigation-arrows-container {
+  position: fixed;
+  right: 25px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  z-index: 999;
+}
+
+.nav-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  /* Dark theme neumorphic shadow - matching social buttons */
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), -9px -9px 16px rgba(255, 255, 255, 0.05);
+  background: #2a2a3e;
+  color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.nav-arrow i {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.nav-arrow:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  transform: scale(1.1);
+  background: #8DFFA4; /* Theme color from the site */
+  color: #212121; /* Dark text on light background */
+}
+
+.nav-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Arrow-specific hover effects */
+.nav-arrow-up:hover i {
+  transform: translateY(-2px);
+}
+
+.nav-arrow-down:hover i {
+  transform: translateY(2px);
+}
+
+/* Visibility states with smooth transitions */
+.nav-arrow.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.nav-arrow.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* Responsive: Adjust for mobile */
+@media (max-width: 768px) {
+  .navigation-arrows-container {
+    right: 12px;
+    bottom: 15px;
+    gap: 0.5em;
+  }
+  
+  .nav-arrow {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .nav-arrow i {
+    font-size: 1em;
+  }
+}
+
+/* Adjust position for smaller desktop screens */
+@media (max-width: 1024px) {
+  .navigation-arrows-container {
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-arrow i {
+    font-size: 1em;
+  }
+}
+

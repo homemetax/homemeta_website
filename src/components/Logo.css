@@ -1,0 +1,36 @@
+/* Logo Component Styles */
+
+.logo-wrapper {
+  display: flex; /* Horizontal layout */
+  align-items: center; /* Vertically centers logo and text */
+  gap: 0.75rem; /* Space between logo and text */
+  cursor: pointer; /* Shows it's clickable */
+}
+
+.logo-svg {
+  /* Image-rendering ensures crisp pixel art at any size */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 4px rgba(141, 255, 164, 0.3)); /* Subtle glow */
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700; /* Bold text */
+  color: #8DFFA4; /* Mint green accent */
+  letter-spacing: 0.05em; /* Slight spacing between letters */
+}
+
+/* Hover effect */
+.logo-wrapper:hover .logo-svg {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+  filter: drop-shadow(0 4px 8px rgba(141, 255, 164, 0.5));
+}
+
+.logo-wrapper:hover .logo-text {
+  color: #C8F4E0; /* Lighter mint on hover */
+}
+

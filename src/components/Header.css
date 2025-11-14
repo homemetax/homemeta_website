@@ -1,0 +1,407 @@
+/* Header Component Styles */
+/* Full-screen overlay navigation with animated menu */
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(33, 33, 33, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.header.scrolled {
+  background-color: rgba(33, 33, 33, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* ====================================
+Overlay Navigation 
+==================================== */
+
+.overlay-navigation {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.98);
+  transform: translateY(-100%);
+}
+
+.overlay-slide-down {
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0);
+}
+
+.overlay-slide-up {
+  transition: all 0.8s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.overlay-navigation nav,
+.overlay-navigation nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay-navigation nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.overlay-navigation nav ul li {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(-100%);
+}
+
+.overlay-navigation nav li a {
+  position: relative;
+  top: 46%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.overlay-navigation nav li a:before {
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: #8DFFA4;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.overlay-navigation nav li a:after {
+  content: attr(data-content);
+  font-size: 0.8rem;
+  transition: all 0.2s linear;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  color: #C8F4E0;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  text-transform: none;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.overlay-navigation nav li a:hover:before {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.overlay-navigation nav li a:hover:after {
+  transform: translateY(15px);
+  opacity: 1;
+}
+
+/* Color scheme using your palette */
+.overlay-navigation nav li:nth-of-type(1) {
+  background-color: #1D382C; /* Dark Teal/Green */
+}
+
+.overlay-navigation nav li:nth-of-type(2) {
+  background-color: #2a2a3e; /* Dark Blue-Gray */
+}
+
+.overlay-navigation nav li:nth-of-type(3) {
+  background-color: #8B6F47; /* Brown */
+}
+
+.overlay-navigation nav li:nth-of-type(4) {
+  background-color: #8DFFA4; /* Mint Green */
+}
+
+.overlay-navigation nav li:nth-of-type(4) a {
+  color: #212121; /* Dark text on mint green background */
+}
+
+.overlay-navigation nav li:nth-of-type(4) a:before {
+  background-color: #212121;
+}
+
+.overlay-navigation nav li:nth-of-type(4) a:after {
+  color: #1D382C;
+}
+
+/* Slide-in animations for nav items */
+.slide-in-nav-item {
+  animation: slide-in-nav-item 0.4s linear 1 0.2s both;
+}
+
+.slide-in-nav-item-delay-1 {
+  animation: slide-in-nav-item 0.4s linear 1 0.4s both;
+}
+
+.slide-in-nav-item-delay-2 {
+  animation: slide-in-nav-item 0.4s linear 1 0.6s both;
+}
+
+.slide-in-nav-item-delay-3 {
+  animation: slide-in-nav-item 0.4s linear 1 0.8s both;
+}
+
+.slide-in-nav-item-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.4s both;
+}
+
+.slide-in-nav-item-delay-1-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.3s both;
+}
+
+.slide-in-nav-item-delay-2-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.2s both;
+}
+
+.slide-in-nav-item-delay-3-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.1s both;
+}
+
+/* ====================================
+Burger Menu Button
+==================================== */
+
+.open-overlay {
+  position: relative;
+  z-index: 1001;
+  width: 34px;
+  display: block;
+  cursor: pointer;
+}
+
+.open-overlay span {
+  display: block;
+  height: 2px;
+  background-color: #8DFFA4;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.open-overlay span:first-child {
+  margin-top: 0;
+}
+
+/* Burger menu animations */
+.animate-top-bar {
+  animation: animate-top-bar 0.6s linear 1 both;
+}
+
+.animate-bottom-bar {
+  animation: animate-bottom-bar 0.6s linear 1 both;
+}
+
+.animate-middle-bar {
+  animation: animate-middle-bar 0.6s linear 1 both;
+}
+
+.animate-out-top-bar {
+  animation: animate-out-top-bar 0.6s linear 1 both;
+}
+
+.animate-out-bottom-bar {
+  animation: animate-out-bottom-bar 0.6s linear 1 both;
+}
+
+.animate-out-middle-bar {
+  animation: animate-out-middle-bar 0.6s linear 1 both;
+}
+
+/* ====================================
+Animation keyframes
+==================================== */
+
+@keyframes slide-in-nav-item {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-nav-item-reverse {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes animate-top-bar {
+  0% {
+    background-color: #8DFFA4;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(6px);
+    background-color: #8DFFA4;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #1D382C;
+  }
+}
+
+@keyframes animate-bottom-bar {
+  0% {
+    background-color: #8DFFA4;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-6px);
+    background-color: #8DFFA4;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #1D382C;
+  }
+}
+
+@keyframes animate-middle-bar {
+  0% {
+    background-color: #8DFFA4;
+  }
+  80% {
+    background-color: #8DFFA4;
+  }
+  100% {
+    background-color: #1D382C;
+  }
+}
+
+@keyframes animate-out-top-bar {
+  0% {
+    background-color: #1D382C;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(6px);
+    background-color: #1D382C;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #8DFFA4;
+  }
+}
+
+@keyframes animate-out-bottom-bar {
+  0% {
+    background-color: #1D382C;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-6px);
+    background-color: #1D382C;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #8DFFA4;
+  }
+}
+
+@keyframes animate-out-middle-bar {
+  0% {
+    background-color: #1D382C;
+  }
+  80% {
+    background-color: #1D382C;
+  }
+  100% {
+    background-color: #8DFFA4;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .overlay-navigation nav ul {
+    flex-direction: column;
+  }
+
+  .overlay-navigation nav ul li {
+    flex-basis: 25%;
+    width: 100%;
+  }
+
+  .overlay-navigation nav li a {
+    font-size: 1rem;
+  }
+
+  .overlay-navigation nav li a:after {
+    font-size: 0.7rem;
+  }
+
+  .overlay-navigation nav li a:before {
+    width: 30px;
+  }
+
+  .open-overlay {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-navigation nav li a {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+}

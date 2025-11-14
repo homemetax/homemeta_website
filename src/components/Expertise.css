@@ -1,0 +1,137 @@
+/* Expertise Section Styles */
+
+.expertise {
+  padding: 6rem 2rem;
+  background-color: #212121; /* Deep black background */
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #E9BE83; /* Tan accent */
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.expertise-card {
+  background-color: rgba(29, 56, 44, 0.6); /* Semi-transparent dark navy */
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(141, 255, 164, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Hides overflow from pseudo-elements */
+}
+
+/* Hover effect with glow */
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(141, 255, 164, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.expertise-card:hover::before {
+  left: 100%; /* Creates a shine effect on hover */
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(141, 255, 164, 0.3);
+  box-shadow: 0 8px 24px rgba(141, 255, 164, 0.2);
+  background-color: rgba(29, 56, 44, 0.8);
+}
+
+.expertise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-icon {
+  font-size: 2.5rem;
+  filter: grayscale(0.3);
+}
+
+.expertise-years {
+  font-size: 0.875rem;
+  color: #E9BE83; /* Tan accent */
+  font-weight: 600;
+  background-color: rgba(233, 190, 131, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(233, 190, 131, 0.3);
+}
+
+.expertise-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8DFFA4; /* Mint green */
+  margin-bottom: 1rem;
+}
+
+.expertise-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #b0b0b0; /* Secondary text */
+}
+
+/* Stats section */
+.expertise-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(141, 255, 164, 0.1);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8DFFA4; /* Mint green */
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(141, 255, 164, 0.3);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .expertise {
+    padding: 4rem 1.5rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .expertise-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+

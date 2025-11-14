@@ -1,0 +1,101 @@
+/* Social Buttons - Floating on the right side of the viewport */
+
+.social-buttons-container {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  z-index: 999;
+  /* Hide on mobile devices */
+}
+
+.social-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  /* Dark theme neumorphic shadow */
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), -9px -9px 16px rgba(255, 255, 255, 0.05);
+  background: #2a2a3e;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-button i {
+  font-size: 1.2em;
+}
+
+.social-button .social-icon-text {
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.social-button:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Platform-specific hover colors */
+.social-button.facebook:hover {
+  background: #3b5998;
+}
+
+.social-button.twitter:hover {
+  background: #000000;
+}
+
+.social-button.instagram:hover {
+  background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.social-button.reddit:hover {
+  background: #ff6314;
+}
+
+/* Responsive: Show on mobile with smaller size */
+@media (max-width: 768px) {
+  .social-buttons-container {
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 0.5em;
+  }
+  
+  .social-button {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .social-button i {
+    font-size: 1em;
+  }
+}
+
+/* Adjust position for smaller desktop screens */
+@media (max-width: 1024px) {
+  .social-buttons-container {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .social-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-button i {
+    font-size: 1em;
+  }
+}
+

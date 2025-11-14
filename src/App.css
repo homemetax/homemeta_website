@@ -1,0 +1,14 @@
+/* Main App Container Styles */
+/* This file contains styles for the overall layout and structure */
+
+.App {
+  min-height: 100vh; /* Ensures the app takes at least the full viewport height */
+  background-color: #212121; /* Dark gray background from our palette */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+

@@ -1,0 +1,127 @@
+/* Vision Section Styles */
+
+.vision {
+  padding: 6rem 2rem; /* Generous padding for breathing room */
+  background-color: #1D382C; /* Dark navy background */
+  position: relative;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem; /* Space before content */
+}
+
+.section-title {
+  font-size: 3rem; /* Large, prominent title */
+  font-weight: 700;
+  color: #8DFFA4; /* Mint green accent */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(141, 255, 164, 0.2);
+}
+
+.section-divider {
+  width: 100px; /* Width of the divider line */
+  height: 4px; /* Thickness of the line */
+  background: linear-gradient(90deg, transparent, #8DFFA4, transparent);
+  margin: 0 auto; /* Centers the divider */
+  border-radius: 2px;
+}
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* Space between main content and pillars */
+}
+
+.vision-main {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; /* Centers the content */
+}
+
+.vision-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.vision-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+/* Vision pillars grid */
+.vision-pillars {
+  display: grid; /* CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  margin-top: 2rem;
+}
+
+.pillar {
+  background-color: rgba(42, 42, 62, 0.5); /* Semi-transparent dark grey */
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid rgba(141, 255, 164, 0.1); /* Subtle border */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px); /* Lifts on hover */
+  border-color: rgba(141, 255, 164, 0.3); /* Brighter border on hover */
+  box-shadow: 0 8px 24px rgba(141, 255, 164, 0.15);
+  background-color: rgba(42, 42, 62, 0.7);
+}
+
+.pillar-icon {
+  font-size: 3rem; /* Large emoji/icon */
+  margin-bottom: 1rem;
+  filter: grayscale(0.3); /* Slight desaturation */
+}
+
+.pillar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8DFFA4; /* Mint green */
+  margin-bottom: 1rem;
+}
+
+.pillar-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b0b0b0; /* Secondary text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .vision {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .vision-heading {
+    font-size: 1.75rem;
+  }
+
+  .vision-text {
+    font-size: 1rem;
+  }
+
+  .vision-pillars {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+
