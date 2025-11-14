@@ -12,10 +12,16 @@ import Expertise from './components/Expertise';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SocialButtons from './components/SocialButtons';
+import NavigationArrows from './components/NavigationArrows';
 
 function App() {
   return (
     <div className="App">
+      {/* Floating UI Components */}
+      <SocialButtons />
+      <NavigationArrows />
+      
       {/* Header component - stays at the top, includes navigation */}
       <Header />
       
